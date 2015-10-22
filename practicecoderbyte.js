@@ -104,3 +104,40 @@ var game = new rockPaperScissors();
 game.play("rock");
 
 
+
+//Write a function that takes an array and replaces all of the odd numbers with the letter ‘O’.
+
+var replace = function(arr){
+  for (var i = 0; i < arr.length; i++){
+    if (arr[i] % 2 !== 0){
+      arr[i] = 'O';
+    }
+  }
+  return arr;
+}
+
+var myArray = [1,2,3,4,5,6];
+replace(myArray);
+
+
+//---------------------------------------
+//playing with map
+
+var a = [1,2,3,4,5,6];
+a.map(function(e){
+  e += 10;
+});
+
+//------------------------------------------
+var a = [1,2,3,4,5,6];
+a.filter(function(e){
+  return e % 2 === 0;
+});//runs a test. notice that i did not use an if statement and it still works swimmingly
+
+
+
+//----------------------
+var a = [1,2,3,4,5,6];
+a.reduce(function(acc, e){
+  return acc + e;
+});
