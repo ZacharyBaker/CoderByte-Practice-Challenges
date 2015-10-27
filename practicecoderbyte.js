@@ -10,12 +10,12 @@
 
 
 
-// function SimpleSymbols(str) { 
+function SimpleSymbols(str) { 
 
 //   // code goes here  
-//   return str; 
+  return str; 
          
-// }
+}
    
 // // keep this function call here 
 // // to see how to enter arguments in JavaScript scroll down
@@ -141,3 +141,59 @@ var a = [1,2,3,4,5,6];
 a.reduce(function(acc, e){
   return acc + e;
 });
+
+//-----------------------------------------------------
+
+// Factorial: Write a function that takes in a number and returns the factorial of that number
+
+// . Ex: factorial(5) returns 120 because 5 * 4 * 3 * 2 * 1 === 120
+
+var factFunc = function(num){
+ if(typeof(num) !== "number" || num < 0){
+   throw("ERROR BREH");
+ }
+  for (var i = num - 1; i > 0; i--){
+    num *= i;
+  } 
+  return num;
+};
+
+//----------------------------------
+
+var factorial = function(num) {
+    if(num === 0) {
+        return 1;
+    } else {
+        return num * factorial(num - 1);
+    }
+}
+ 
+//----------------------------------------------------------
+
+// have the function divisionStringified(num1,num2) 
+// take both parameters being passed, divide num1 by 
+// num2, and return the result as a string with properly
+//  formatted commas. If an answer is only 3 digits long,
+//   return the number with no commas (ie. 2 / 3 
+//   should output "1"). For example: if num1 is 123456789
+//    and num2 is 10000 the output should be "12,345".
+
+// Gabriel [9:21 AM]
+// Remove any decimals that result from the division
+
+function divisionStringified(num1, num2){
+  var result = num1 / num2;
+  
+  result = Math.floor(result);
+   var str = result + '';
+  
+  var resultArray = str.split('');
+  if(resultArray.length > 3){
+    resultArray.splice(1, 0, ",");
+  }
+  resultArray = resultArray.join('');
+  result = resultArray;
+  return result;
+  
+}
+//-------------------------------------------------------------
