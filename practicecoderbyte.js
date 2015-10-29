@@ -328,3 +328,10 @@ var myFunc3 = function (str) {
   }
   return result;
 }//yaya this one finally works!!
+
+
+//now try and only accept strings in the format of an email
+
+var acceptEmail = function(str){
+  
+}
