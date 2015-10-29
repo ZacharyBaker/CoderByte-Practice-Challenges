@@ -259,9 +259,9 @@ function simpleSymbols3(str) {
   if (/[a-zA-Z]/.test(str[0]) || /a-zA-Z/.test(str[str.length - 1])) {
     return false;
   }
-  for (var i = 1; i < strArray.length - 2; i++){
-    if(/a-zA-Z/.test(strArray[i])){
-      if(/\+/.test(strArray[i-1]) && /\+/.test(strArray[i+1])){
+  for (var i = 1; i < strArray.length - 2; i++) {
+    if (/a-zA-Z/.test(strArray[i])) {
+      if (/\+/.test(strArray[i - 1]) && /\+/.test(strArray[i + 1])) {
         result = true;
       } else {
         result = false;
@@ -272,18 +272,59 @@ function simpleSymbols3(str) {
 }
 ///-----------------------gabe's way of doing it
 function simpleSymbols4(str) {
-       if (typeof str !== 'string' || !/[a-zA-Z]/.test(str)) {
-           throw 'error: please pass at least one letter of the alphabet';
-       }  
+  if (typeof str !== 'string' || !/[a-zA-Z]/.test(str)) {
+    throw 'error: please pass at least one letter of the alphabet';
+  }
 
-       var splitStr = str.split('');
-       if (/[a-zA-Z]/.test(splitStr[0]) || /[a-zA-Z]/.test(splitStr[splitStr.length - 1])) {
-           return 'false';
-       }
+  var splitStr = str.split('');
+  if (/[a-zA-Z]/.test(splitStr[0]) || /[a-zA-Z]/.test(splitStr[splitStr.length - 1])) {
+    return 'false';
+  }
 
-       var acceptable = splitStr.every(function (e, i, arr) {
-           return !/[a-zA-Z]/.test(e) || (/[a-zA-Z]/.test(e) && /\+/.test(arr[i - 1]) && /\+/.test(arr[i + 1]));
-       });
-       
-       return acceptable ? 'true' : 'false';
-   }
+  var acceptable = splitStr.every(function (e, i, arr) {
+    return !/[a-zA-Z]/.test(e) || (/[a-zA-Z]/.test(e) && /\+/.test(arr[i - 1]) && /\+/.test(arr[i + 1]));
+  });
+
+  return acceptable ? 'true' : 'false';
+}
+//------------------------------------------------------------------------
+   
+//take a string and will return true if only numbers or underscore, anything else
+// is false
+   
+var myFunc = function (str) {
+  if (/d/.test(str) || /[_]/.test(str)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+   
+//-------------
+   
+var myFunc2 = function (str) {
+  var result;
+  var splitStr = str.split('');
+  for (var i = 0; i < splitStr.length; i++) {
+    if (/\d/.test(splitStr[i]) || /_/.test(splitStr[i])) {
+      result = true;
+    } else {
+      result = false;
+    }
+  }
+  return result;
+
+}
+//-----------------
+var myFunc3 = function (str) {
+  var result;
+  var splitStr = str.split('');
+  for (var i = 0; i < splitStr.length; i++) {
+    if (/[^0-9_]/.test(splitStr[i])) {
+      return false;
+    } else {
+      result = true;
+    }
+  }
+  return result;
+}//yaya this one finally works!!
