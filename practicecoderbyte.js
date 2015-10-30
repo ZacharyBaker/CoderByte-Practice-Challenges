@@ -335,3 +335,47 @@ var myFunc3 = function (str) {
 var acceptEmail = function(str){
   
 }
+
+//-------------------------------------------------------------
+
+// Using the JavaScript language, have the
+// function letterChanges(str) take the 
+//str parameter being passed and modify it
+// using the following algorithm: Capitalize
+// every vowel in this new string 
+//(a, e, i, o, u) and return this modified string.
+
+function letterChanges(str){
+  
+  if (typeof str !== 'string' || str.length === 0){
+    alert('you gotta do better than that pal');
+      return;
+    }
+  
+  
+  
+  var splitStr = str.split('');
+  var newArr = [];
+  splitStr.forEach(function(e, i, arr){
+    if(/[aeiou]/.test(e)){
+      newArr.push(arr[i].toUpperCase());
+    } else {
+      newArr.push(arr[i]);
+    }
+  });
+  
+  var newString = newArr.join('');
+  return newString;
+};
+//It works!!-------------------------------------------
+
+
+//next prob
+// Create a function that takes a 
+//string and returns an integer, which
+// represents the total number of digits 
+//(0-9) and letters of the alphabet 
+//(A-Z and a-z) that it contains. Use regular expressions and a forEach.
+
+
+
