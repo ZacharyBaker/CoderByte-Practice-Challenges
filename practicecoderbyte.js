@@ -332,8 +332,8 @@ var myFunc3 = function (str) {
 
 //now try and only accept strings in the format of an email
 
-var acceptEmail = function(str){
-  
+var acceptEmail = function (str) {
+
 }
 
 //-------------------------------------------------------------
@@ -345,25 +345,25 @@ var acceptEmail = function(str){
 // every vowel in this new string 
 //(a, e, i, o, u) and return this modified string.
 
-function letterChanges(str){
-  
-  if (typeof str !== 'string' || str.length === 0){
+function letterChanges(str) {
+
+  if (typeof str !== 'string' || str.length === 0) {
     alert('you gotta do better than that pal');
-      return;
-    }
-  
-  
-  
+    return;
+  }
+
+
+
   var splitStr = str.split('');
   var newArr = [];
-  splitStr.forEach(function(e, i, arr){
-    if(/[aeiou]/.test(e)){
+  splitStr.forEach(function (e, i, arr) {
+    if (/[aeiou]/.test(e)) {
       newArr.push(arr[i].toUpperCase());
     } else {
       newArr.push(arr[i]);
     }
   });
-  
+
   var newString = newArr.join('');
   return newString;
 };
@@ -379,3 +379,42 @@ function letterChanges(str){
 
 
 
+//-------------------------------------------------------
+
+
+// Using the JavaScript language, have the 
+//function division(num1,num2) take both parameters
+// being passed and return the Greatest Common
+//
+// Factor. That is, return the greatest number 
+//that evenly goes into both numbers with no
+// remainder. For example: 12 and 16 both are
+// divisible by 1, 2, and 4 so the output should 
+//be 4. The range for both parameters will be from 1 to 10^3.
+
+function division(num1, num2) {
+ if(typeof num1 !== "number" || typeof num2 !== "number"){
+   alert("try harder pal");
+   return;
+ }
+  for (var i = num1 <= num2 ? num1 : num2; i > 0; i--) {
+    if (num1 % i === 0 && num2 % i === 0) {
+      return i;
+    }
+  }
+}
+
+//---------------------------------------------------------
+//Using the JavaScript language, have the function
+// primeMover(n) return the nth prime number. For 
+//example: if n is 16 the output should be 53 as 
+//53 is the 16th prime number.
+
+
+//Note: you should probably split this last problem 
+//in two functions: a 'prime number detector' helper
+// function, and the main function.
+
+
+//Note2: prime numbers can only be divided by themselves 
+//or one (leaving no remainder)
