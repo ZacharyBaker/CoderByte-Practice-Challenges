@@ -393,10 +393,10 @@ function letterChanges(str) {
 //be 4. The range for both parameters will be from 1 to 10^3.
 
 function division(num1, num2) {
- if(typeof num1 !== "number" || typeof num2 !== "number"){
-   alert("try harder pal");
-   return;
- }
+  if (typeof num1 !== "number" || typeof num2 !== "number") {
+    alert("try harder pal");
+    return;
+  }
   for (var i = num1 <= num2 ? num1 : num2; i > 0; i--) {
     if (num1 % i === 0 && num2 % i === 0) {
       return i;
@@ -418,3 +418,52 @@ function division(num1, num2) {
 
 //Note2: prime numbers can only be divided by themselves 
 //or one (leaving no remainder)
+
+
+// -------------------------------------------------------------
+
+
+
+// Using the JavaScript language, have the 
+//function swapCase(str) take the str parameter
+// and swap the case of each character. For 
+//example: if str is "Hello World" the output
+// should be hELLO wORLD. Let numbers and symbols
+// stay the way they are.
+
+function swapCase(str) {
+  var splitStr = str.split('');
+  var newArr = [];
+  splitStr.forEach(function (e) {
+    if (/[A-Z]/.test(e)) {
+      newArr.push(e.toLowerCase());
+    } else if (/[a-z]/.test(e)) {
+      newArr.push(e.toUpperCase());
+    }
+  })
+  var newStr = newArr.join('');
+  return newStr;
+}
+
+
+//-------------------------------------------------------------------
+
+// Using the JavaScript language, have the function
+// powersOfTwo(num) take the num parameter being passed
+// which will be an integer and return the string true 
+//if it's a power of two. If it's not return the string
+// false. For example if the input is 16 then your program
+// should return the string true but if the input is 22 then
+// the output should be the string false.
+
+
+function powersOfTwo(num){
+  //var counter = 2;    can't reset the counter every time
+  if (counter === num){
+    return true;
+  } else if (counter > num){
+    return false;
+  } else {
+    powersOfTwo(counter * 2);
+  }
+}
