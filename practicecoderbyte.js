@@ -457,13 +457,32 @@ function swapCase(str) {
 // the output should be the string false.
 
 
-function powersOfTwo(num){
+function powersOfTwo(num) {
   //var counter = 2;    can't reset the counter every time
-  if (counter === num){
+  if (counter === num) {
     return true;
-  } else if (counter > num){
+  } else if (counter > num) {
     return false;
   } else {
     powersOfTwo(counter * 2);
   }
+}
+
+//---------------------------not finished
+
+// Using the JavaScript language, have 
+//the function stringScramble(str1,str2)
+// take both parameters being passed and 
+//return true if str1 contains all characters
+// in str2, otherwise return false. For example: 
+//if str1 is "rkqodlw" and str2 is "world" the
+// output should return true. Punctuation and 
+//symbols will not be entered with the parameters.
+
+function stringScramble(str1, str2) {
+  var splitStr1 = str1.split('');
+  var splitStr2 = str2.split('');
+  return splitStr2.every(function (e) {
+    return splitStr1.indexOf(e) !== -1;
+  });
 }
