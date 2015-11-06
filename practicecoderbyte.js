@@ -470,6 +470,24 @@ function powersOfTwo(num) {
 
 //---------------------------not finished
 
+function powersOfTwo2(num) {
+       if (num === 2) return true;
+       else if (num % 2 === 0) return powersOfTwo(num / 2);
+       else return false;
+   }
+   
+//-----------------^gabe's answers--------------------------------
+
+
+
+
+
+
+
+
+
+
+
 // Using the JavaScript language, have 
 //the function stringScramble(str1,str2)
 // take both parameters being passed and 
@@ -486,3 +504,96 @@ function stringScramble(str1, str2) {
     return splitStr1.indexOf(e) !== -1;
   });
 }
+
+//--------complete---------------------------------------
+
+
+//Create a function that takes an array and returns 
+//true if all the elements of the array are equal; false otherwise.
+
+//It follows the pattern of: if we are running out of elements: return 
+//true; else if the head of the array is not equal to the following 
+//element, return false; else call the function recursively on the tail of the array.
+
+//Head is the first element, tail is all elements minus the head
+
+function bombArray(arr){
+  
+}
+
+//--------------------------------------------------------
+
+// write an isArrayAcceptable function
+
+//if passed an array, non-empty, of integers greater
+// than zero, can't be all equal... returns true
+//else returns false
+
+function isArrayAceeptable(arr){
+  var cantBeEqualArr = [];
+  if(Array.isArray(arr) && arr.length > 0) {
+    for (var i = 0; i < arr.length; i++){
+      if (arr[i] > 0 && arr[i] % 1 === 0){
+      var acceptable = true; 
+       cantBeEqualArr.push(arr[i]);
+      
+      } else {
+        return false
+      }
+    }
+  } else {
+    return false;
+  }
+  
+  return acceptable;
+}
+
+//-------------------------solve the can't be equal part with recursion
+
+function equalFinder(arr){
+  arr.every(function(e){
+    
+  })
+}
+
+//----------------------------------------------
+
+//An easy one to get started
+
+
+// Using the JavaScript language, have the function vowelCount(str)
+// take the str string parameter being passed and return the number 
+//of vowels the string contains (ie. "All cows eat grass" would return 5).
+
+function vowelCount(str){
+  var counter = 0;
+  var splitStr = str.split('');
+  splitStr.forEach(function(e){
+    if(/[AEIOUaeiou]/.test(e)){
+      counter++;
+    }
+  })
+  return counter;
+}
+
+//And then...
+
+
+// Using the JavaScript language, have the function
+// timeConvert(num) take the num parameter being 
+//passed and return the number of hours and minutes 
+//the parameter converts to, in the 'digital' format(ie.
+// if num = 63 then the output should be the string 1:03).
+
+function timeConvert(num) {
+ 
+  var hr = Math.floor(num / 60);
+  var min = num % 60;
+ 
+  if (min < 10) {
+    min = '0' + min;
+  }
+ 
+  return hr + ':' + min;
+}
+
