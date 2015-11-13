@@ -471,10 +471,10 @@ function powersOfTwo(num) {
 //---------------------------not finished
 
 function powersOfTwo2(num) {
-       if (num === 2) return true;
-       else if (num % 2 === 0) return powersOfTwo(num / 2);
-       else return false;
-   }
+  if (num === 2) return true;
+  else if (num % 2 === 0) return powersOfTwo(num / 2);
+  else return false;
+}
    
 //-----------------^gabe's answers--------------------------------
 
@@ -517,8 +517,8 @@ function stringScramble(str1, str2) {
 
 //Head is the first element, tail is all elements minus the head
 
-function bombArray(arr){
-  
+function bombArray(arr) {
+
 }
 
 //--------------------------------------------------------
@@ -529,14 +529,14 @@ function bombArray(arr){
 // than zero, can't be all equal... returns true
 //else returns false
 
-function isArrayAceeptable(arr){
+function isArrayAceeptable(arr) {
   var cantBeEqualArr = [];
-  if(Array.isArray(arr) && arr.length > 0) {
-    for (var i = 0; i < arr.length; i++){
-      if (arr[i] > 0 && arr[i] % 1 === 0){
-      var acceptable = true; 
-       cantBeEqualArr.push(arr[i]);
-      
+  if (Array.isArray(arr) && arr.length > 0) {
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] > 0 && arr[i] % 1 === 0) {
+        var acceptable = true;
+        cantBeEqualArr.push(arr[i]);
+
       } else {
         return false
       }
@@ -544,15 +544,15 @@ function isArrayAceeptable(arr){
   } else {
     return false;
   }
-  
+
   return acceptable;
 }
 
 //-------------------------solve the can't be equal part with recursion
 
-function equalFinder(arr){
-  arr.every(function(e){
-    
+function equalFinder(arr) {
+  arr.every(function (e) {
+
   })
 }
 
@@ -565,11 +565,11 @@ function equalFinder(arr){
 // take the str string parameter being passed and return the number 
 //of vowels the string contains (ie. "All cows eat grass" would return 5).
 
-function vowelCount(str){
+function vowelCount(str) {
   var counter = 0;
   var splitStr = str.split('');
-  splitStr.forEach(function(e){
-    if(/[AEIOUaeiou]/.test(e)){
+  splitStr.forEach(function (e) {
+    if (/[AEIOUaeiou]/.test(e)) {
       counter++;
     }
   })
@@ -586,14 +586,60 @@ function vowelCount(str){
 // if num = 63 then the output should be the string 1:03).
 
 function timeConvert(num) {
- 
+
   var hr = Math.floor(num / 60);
   var min = num % 60;
- 
+
   if (min < 10) {
     min = '0' + min;
   }
- 
+
   return hr + ':' + min;
 }
+
+//--------------------------------------------
+
+//Using the JavaScript language, have the function numberSearch(str) 
+//take the str parameter, search for all the numbers in the string, 
+//add them together, then return that final number. For example: if
+// str is "88Hello 3World!" the output should be 91. You will have to
+// differentiate between single digit numbers and multiple digit numbers
+// like in the example above. So "55Hello" and "5Hello 5" should return two
+// different answers. Each string will contain at least one letter or symbol.
+
+function numberSearch(str) {
+
+
+}
+  
+//Do you remember recursion? Give recursive solutions to the following problems:
+
+
+//Function that takes an array of integers and returns 
+//an integer which is the sum of all elements
+function addThemUp(arr){
+  if (arr.length === 1) return arr[0];
+  
+  arr[1] = arr[0] + arr[1];
+  
+  return addThemUp(arr.slice(1));
+}
+
+// Function that takes an array of strings 
+//returns a string which is the original strings
+// concatenated together, with spaces between them
+//NEW MESSAGES
+function addTheStrings(arr){
+  if (arr.length === 1) return arr[0];
+  
+  arr[1] = arr[0] + ' ' + arr[1];
+  
+  return addTheStrings(arr.slice(1));
+}
+
+
+
+//Function that takes ANY number of arrays, and 
+//returns an array which is the concatenation of 
+//the original arrays (might want to use the arguments seudo-array)
 
