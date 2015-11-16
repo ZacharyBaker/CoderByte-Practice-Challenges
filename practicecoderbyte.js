@@ -643,3 +643,63 @@ function addTheStrings(arr){
 //returns an array which is the concatenation of 
 //the original arrays (might want to use the arguments seudo-array)
 
+
+
+
+//------------------------------------------
+//You are working on a video game. Create contructor functions for:
+
+//Hero: has name, life points, preferred weapon.
+//Heroes can eat (increases life points), punch, attack with
+// weapon (both of which decrease opponents' life points).
+// These methods will be inherited from the Hero's prototype.
+
+function Hero(name, lifePoints, weapon){
+  this.name = name;
+  this.health = lifePoints;
+  this.weapon = weapon;
+}
+
+Hero.prototype.eat = function(food){//depending on what food health increases by certain amount
+  return this.health += food;
+  console.log("health: " + this.health);
+  console.log('Hero gained health!');
+}
+Hero.prototype.punch = function(Troll){
+  Troll.health -= 10;
+  console.log("health: ", Troll.health);
+  console.log(this.name + ' punched ' + Troll.name);
+}
+Hero.prototype.attack = function(Troll){
+  Troll.health -= 30;
+  console.log('Troll was attacked by Hero!');
+  console.log("health: " + Troll.health);
+}
+
+//Troll: has battle-name, life points, preferred weapon.
+//Trolls can eat heroes (increases life points), grunt,
+// bite, attack with weapon (both of which decrease opponents'
+// life points). These methods will be inherited from the Troll's prototype.
+
+function Troll(name, lifePoints, weapon){
+  this.name = name;
+  this.health = lifePoints;
+  this.weapon = weapon;
+}
+Troll.prototype.eatHero = function(Hero){
+  Hero.health = 0;
+  console.log(this.name + ' ate ' + Hero.name);
+  Hero = {};
+}
+Troll.prototype.bite = function(Hero){
+  Hero.health -= 20;
+  console.log('Troll bit Hero!');
+  console.log('health :' + Hero.health);
+}
+Troll.prototype.attack = function(Hero){
+  Hero.health -= 30;
+  console.log('health :', Hero.health);
+  console.log('Troll attacked Hero!');
+}
+
+//When you finish add more complexity!
