@@ -617,11 +617,11 @@ function numberSearch(str) {
 
 //Function that takes an array of integers and returns 
 //an integer which is the sum of all elements
-function addThemUp(arr){
+function addThemUp(arr) {
   if (arr.length === 1) return arr[0];
-  
+
   arr[1] = arr[0] + arr[1];
-  
+
   return addThemUp(arr.slice(1));
 }
 
@@ -629,11 +629,11 @@ function addThemUp(arr){
 //returns a string which is the original strings
 // concatenated together, with spaces between them
 //NEW MESSAGES
-function addTheStrings(arr){
+function addTheStrings(arr) {
   if (arr.length === 1) return arr[0];
-  
+
   arr[1] = arr[0] + ' ' + arr[1];
-  
+
   return addTheStrings(arr.slice(1));
 }
 
@@ -654,23 +654,23 @@ function addTheStrings(arr){
 // weapon (both of which decrease opponents' life points).
 // These methods will be inherited from the Hero's prototype.
 
-function Hero(name, lifePoints, weapon){
+function Hero(name, lifePoints, weapon) {
   this.name = name;
   this.health = lifePoints;
   this.weapon = weapon;
 }
 
-Hero.prototype.eat = function(food){//depending on what food health increases by certain amount
+Hero.prototype.eat = function (food) {//depending on what food health increases by certain amount
   return this.health += food;
   console.log("health: " + this.health);
   console.log('Hero gained health!');
 }
-Hero.prototype.punch = function(Troll){
+Hero.prototype.punch = function (Troll) {
   Troll.health -= 10;
   console.log("health: ", Troll.health);
   console.log(this.name + ' punched ' + Troll.name);
 }
-Hero.prototype.attack = function(Troll){
+Hero.prototype.attack = function (Troll) {
   Troll.health -= 30;
   console.log('Troll was attacked by Hero!');
   console.log("health: " + Troll.health);
@@ -681,25 +681,97 @@ Hero.prototype.attack = function(Troll){
 // bite, attack with weapon (both of which decrease opponents'
 // life points). These methods will be inherited from the Troll's prototype.
 
-function Troll(name, lifePoints, weapon){
+function Troll(name, lifePoints, weapon) {
   this.name = name;
   this.health = lifePoints;
   this.weapon = weapon;
 }
-Troll.prototype.eatHero = function(Hero){
+Troll.prototype.eatHero = function (Hero) {
   Hero.health = 0;
   console.log(this.name + ' ate ' + Hero.name);
   Hero = {};
 }
-Troll.prototype.bite = function(Hero){
+Troll.prototype.bite = function (Hero) {
   Hero.health -= 20;
   console.log('Troll bit Hero!');
   console.log('health :' + Hero.health);
 }
-Troll.prototype.attack = function(Hero){
+Troll.prototype.attack = function (Hero) {
   Hero.health -= 30;
   console.log('health :', Hero.health);
   console.log('Troll attacked Hero!');
 }
 
 //When you finish add more complexity!
+
+//--------------------------------------
+
+//var counter = getCounter();
+
+//counter(); //2
+
+//counter(); //4
+
+//counter(); //6
+
+//counter(); //8
+
+//counter(); //10
+
+function getCounter() {
+  var counter = 0;
+  return function inner() {
+    return counter += 2;
+  }
+}
+
+
+//--------------------------------------
+
+// Using the JavaScript language, have the 
+//function ABCheck(str) take the str parameter
+// being passed and return the string true 
+//if the characters a and b, in that order,
+// are separated by exactly 3 places anywhere 
+//in the string at least once (ie. "lane 
+//borrowed" would result in true because there 
+//is exactly three characters -that aren't 
+//a or b- between a and b). Otherwise return the string false.
+
+//-----------------------------------
+
+
+
+// the JavaScript language, have the function 
+//secondGreatLow(arr) take the array of numbers 
+//stored in arr and return the second lowest 
+//and second greatest numbers, respectively, separated 
+//by a space. For example: if arr contains [7, 7, 12, 98,
+//
+// 106] the output should be 12 98. The array will 
+//not be empty and will contain at least 2 numbers.
+
+function secondGreatLow(arr) {
+  if (arr.length > 2) {
+
+    var noDups = [];
+    var arrOfTwo = [];
+    arr.sort(function (a, b) {
+      return a - b;
+    })
+
+    for (var i = 0; i < arr.length; i++) {
+      if (noDups.indexOf(arr[i]) === -1) noDups.push(arr[i]);
+    }
+
+    arrOfTwo.push(noDups[1]);
+    arrOfTwo.push(noDups[noDups.length - 2]);
+
+    return arrOfTwo;
+  } else {
+    return arr;
+  }
+
+}
+
+//^^ you need to remove duplicates!!
