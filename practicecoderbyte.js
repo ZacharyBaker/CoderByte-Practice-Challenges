@@ -775,3 +775,7 @@ function secondGreatLow(arr) {
 }
 
 //^^ you need to remove duplicates!!
+
+
+
+//
