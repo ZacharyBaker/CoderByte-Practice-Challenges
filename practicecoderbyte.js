@@ -738,6 +738,40 @@ function getCounter() {
 //is exactly three characters -that aren't 
 //a or b- between a and b). Otherwise return the string false.
 
+
+function ABChecker(str){
+  
+  var lowercaseStr = str.toLowerCase();
+  
+  if (lowercaseStr.length < 5) return false;
+  
+  for (var i = 0; i < lowercaseStr.length; i++){
+    if (lowercaseStr[i] === 'a') {
+      if( lowercaseStr[i + 1] !== 'b' && lowercaseStr[i + 1] !== 'a' 
+      && lowercaseStr[i + 2] !== 'b' && lowercaseStr[i + 2] !== 'a' 
+      && lowercaseStr[i + 3] !== 'b' && lowercaseStr[i + 3] !== 'a' 
+      && lowercaseStr[i+4] === 'b'){
+        return true;
+      }
+    }
+  }
+  for (var i = 0; i < lowercaseStr.length; i++){
+    if (lowercaseStr[i] === 'b') {
+      if( lowercaseStr[i + 1] !== 'b' && lowercaseStr[i + 1] !== 'a'
+       && lowercaseStr[i + 2] !== 'b' && lowercaseStr[i + 2] !== 'a' 
+       && lowercaseStr[i + 3] !== 'b' && lowercaseStr[i + 3] !== 'a' 
+       && lowercaseStr[i+4] === 'a'){
+        return true;
+      }
+    }
+  }
+  
+  return false;
+  
+  
+  
+}
+
 //-----------------------------------
 
 
@@ -774,12 +808,3 @@ function secondGreatLow(arr) {
 
 }
 
-//^^ you need to remove duplicates!!
-
-
-
-//
-
-//
-
-//
