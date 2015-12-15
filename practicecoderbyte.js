@@ -809,3 +809,9 @@ function secondGreatLow(arr) {
 }
 
 //
+
+//binary
+
+function toBinary(a,b){
+  return (a+b).toString(2);
+}
