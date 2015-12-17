@@ -815,3 +815,26 @@ function secondGreatLow(arr) {
 function toBinary(a,b){
   return (a+b).toString(2);
 }
+
+
+//rotate arrayjs
+
+//ticket checker
+
+function nbrValidTickets(tickets){
+ var valid = 0;
+ for (var i = 0; i < tickets.length; i++){
+   if (tickets[i].length === 6
+   && /[a-zA-Z]/.test(tickets[i][0])
+   && /\d/.test(tickets[i][1])
+   && /[a-zA-Z]/.test(tickets[i][2])
+   && /[a-zA-Z]/.test(tickets[i][3])
+   && /[a-zA-Z]/.test(tickets[i][4])
+   && /[a-zA-Z]/.test(tickets[i][5])
+   ){
+     valid += 1;
+       
+     }
+   }
+ return valid;
+}
