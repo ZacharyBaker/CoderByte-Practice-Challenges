@@ -838,3 +838,20 @@ function nbrValidTickets(tickets){
    }
  return valid;
 }
+
+
+
+// The Coins of Ter
+
+// Ter is a small country, located between
+// Brelnam and the Orange juice ocean. It uses many different
+// coins and bills for payment. However, one day, the 
+//leaders of Ter decide that there are too many small coins. 
+//Therefore, they ban the small coins. But no one knows
+// which coins they'll ban, so they ask you to provide a 
+//tool that can recalculate a price. After all, if one does 
+//not have a 1 Terrek bill and can only give a 2 Terrek bill, 
+//one needs to adjust the oddly priced items.
+function adjust(coin, price){
+  return 0; // fix me
+}
