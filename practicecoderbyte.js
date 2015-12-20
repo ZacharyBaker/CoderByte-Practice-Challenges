@@ -878,3 +878,5 @@ function arraySum(arr) {
     }
  }
  return summ;
+ 
+ //this test worked for two out of three on codewars
