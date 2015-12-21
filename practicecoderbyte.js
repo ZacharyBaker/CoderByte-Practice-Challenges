@@ -880,3 +880,9 @@ function arraySum(arr) {
  return summ;
  
  //this test worked for two out of three on codewars
+ 
+ //replacing 2 with 't'
+ function tea42(input) {
+  
+  return input.toString().replace(/[2]/g, "t");
+};
