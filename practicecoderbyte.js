@@ -896,3 +896,20 @@ function arraySum(arr) {
 function powers(list) {
   // Program me!
 }
+
+
+
+//----------------------------------------
+
+
+function myParseInt (str) {
+  if (/[a-zA-Z]/.test(str)){
+     return "NaN";
+   } else if (/[.]/.test(str)) {
+     return parseFloat(str).toFixed(1);
+   }
+   
+   else {
+     return parseInt(str);
+   }
+}
