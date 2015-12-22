@@ -878,7 +878,7 @@ function arraySum(arr) {
     }
  }
  return summ;
- 
+}
  //this test worked for two out of three on codewars
  
  //replacing 2 with 't'
@@ -886,3 +886,13 @@ function arraySum(arr) {
   
   return input.toString().replace(/[2]/g, "t");
 };
+
+
+// In this kata, you must create a 
+//function powers that takes an array, and returns the 
+//number of subsets possible to create from that list.
+// In other words, counts the power sets.
+
+function powers(list) {
+  // Program me!
+}
