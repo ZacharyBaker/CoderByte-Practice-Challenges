@@ -922,3 +922,11 @@ function chain(x, functions) {
   });
   return x;
 }
+
+
+//------------------
+//distance between two points
+
+function lengthOfLine(array){
+  return ; //length of the line rounded to 2 decimal places as a string
+}
