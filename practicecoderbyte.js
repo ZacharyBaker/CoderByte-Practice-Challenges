@@ -865,26 +865,26 @@ function adjust(coin, price) {
 
 
 function arraySum(arr) {
-  var summ = 0;
-  for (var i = 0; i < arr.length; i++) {
-    if (!arr[i].length){
-    summ += arr[i];
-  } else {
-      arr[i].forEach(function(e) {
-      for (var j = 0; j < e.length; j++) {
-        summ += e[j];
-      }
-      })
-    }
- }
- return summ;
+	var summ = 0;
+	for (var i = 0; i < arr.length; i++) {
+		if (!arr[i].length) {
+			summ += arr[i];
+		} else {
+			arr[i].forEach(function (e) {
+				for (var j = 0; j < e.length; j++) {
+					summ += e[j];
+				}
+			})
+		}
+	}
+	return summ;
 }
- //this test worked for two out of three on codewars
+//this test worked for two out of three on codewars
  
- //replacing 2 with 't'
- function tea42(input) {
-  
-  return input.toString().replace(/[2]/g, "t");
+//replacing 2 with 't'
+function tea42(input) {
+
+	return input.toString().replace(/[2]/g, "t");
 };
 
 
@@ -894,7 +894,7 @@ function arraySum(arr) {
 // In other words, counts the power sets.
 
 function powers(list) {
-  // Program me!
+	// Program me!
 }
 
 
@@ -902,31 +902,39 @@ function powers(list) {
 //----------------------------------------
 
 
-function myParseInt (str) {
-  if (/[a-zA-Z]/.test(str)){
-     return "NaN";
-   } else if (/[.]/.test(str)) {
-     return parseFloat(str).toFixed(1);
-   }
-   
-   else {
-     return parseInt(str);
-   }
+function myParseInt(str) {
+	if (/[a-zA-Z]/.test(str)) {
+		return "NaN";
+	} else if (/[.]/.test(str)) {
+		return parseFloat(str).toFixed(1);
+	}
+
+	else {
+		return parseInt(str);
+	}
 }
 //--------------------------------------
 
 function chain(x, functions) {
-  functions = functions || [];
-  functions.forEach(function(fn) {
-    x = fn(x);
-  });
-  return x;
+	functions = functions || [];
+	functions.forEach(function (fn) {
+		x = fn(x);
+	});
+	return x;
 }
 
 
 //------------------
 //distance between two points
 
-function lengthOfLine(array){
-  return ; //length of the line rounded to 2 decimal places as a string
+function lengthOfLine(array) {
+
+	var a = x1 - x2//find out what the array will look like
+	var b = y1 - y2
+
+	var c = Math.sqrt(a * a + b * b);
+
+	// c is the distance
+	
+	return c; //length of the line rounded to 2 decimal places as a string
 }
