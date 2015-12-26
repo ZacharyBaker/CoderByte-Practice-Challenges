@@ -938,3 +938,13 @@ function lengthOfLine(array) {
 	
 	return c; //length of the line rounded to 2 decimal places as a string
 }
+
+//-------------------------------
+
+function mine(dude){
+	
+	if (dude.indexOf("m")){
+		return dude.replace(/m/g, "");
+	} else return false;
+	
+}
