@@ -948,3 +948,14 @@ function mine(dude){
 	} else return false;
 	
 }
+
+
+//----------------------------------------------------
+
+function yours(dude){
+	
+	if (dude.indexOf("y")){
+		return dude.replace(/y/g, "");
+	} else return false;
+	
+}
