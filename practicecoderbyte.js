@@ -959,3 +959,17 @@ function yours(dude){
 	} else return false;
 	
 }
+
+//----------------------------
+
+var replace = function (arr) {
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] % 2 !== 0) {
+			arr[i] = 'O';
+		}
+	}
+	return arr;
+}
+
+var myArray = [1, 2, 3, 4, 5, 6];
+replace(myArray);
