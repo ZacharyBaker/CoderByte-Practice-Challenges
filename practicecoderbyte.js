@@ -984,3 +984,9 @@ var isSquare = function(n){
   if ( Number.isInteger(dude) ) return true;
   else return false;
 }
+
+//----------------------
+
+var isSquare = function(n){
+	return Math.sqrt(n) % 1 === 0;
+}
