@@ -973,3 +973,14 @@ var replace = function (arr) {
 
 var myArray = [1, 2, 3, 4, 5, 6];
 replace(myArray);
+
+//-----------------------------------
+
+//is it a perfect square??
+
+var isSquare = function(n){
+  if (n < 0) return false;
+  var dude = Math.sqrt(n);
+  if ( Number.isInteger(dude) ) return true;
+  else return false;
+}
