@@ -990,3 +990,8 @@ var isSquare = function(n){
 var isSquare = function(n){
 	return Math.sqrt(n) % 1 === 0;
 }
+//=------------------
+
+function sum(array) {
+  return array.reduce( (prev, curr) => prev + curr );
+}
