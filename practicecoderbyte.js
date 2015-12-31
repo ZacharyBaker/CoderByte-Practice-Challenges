@@ -1005,3 +1005,13 @@ if(!(pin.length === 4 || pin.length === 6)) return false;
 var x = pin.replace(/[^0-9]/g, "");
 return x.length === pin.length;
 }
+
+//---------------------
+
+//pairs
+
+var pairs = {'A':'T','T':'A','C':'G','G':'C'};
+
+function DNAStrand(dna){
+  return dna.split('').map(function(v){ return pairs[v] }).join('');
+}
