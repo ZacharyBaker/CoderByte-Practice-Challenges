@@ -1015,3 +1015,22 @@ var pairs = {'A':'T','T':'A','C':'G','G':'C'};
 function DNAStrand(dna){
   return dna.split('').map(function(v){ return pairs[v] }).join('');
 }
+
+
+//-------------------------
+
+//swapping case
+
+function swapCase(str) {
+	var splitStr = str.split('');
+	var newArr = [];
+	splitStr.forEach(function (e) {
+		if (/[A-Z]/.test(e)) {
+			newArr.push(e.toLowerCase());
+		} else if (/[a-z]/.test(e)) {
+			newArr.push(e.toUpperCase());
+		}
+	})
+	var newStr = newArr.join('');
+	return newStr;
+}
