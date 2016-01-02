@@ -1034,3 +1034,17 @@ function swapCase(str) {
 	var newStr = newArr.join('');
 	return newStr;
 }
+
+//---------------------
+
+function division(num1, num2) {
+	if (typeof num1 !== "number" || typeof num2 !== "number") {
+		alert("try harder pal");
+		return;
+	}
+	for (var i = num1 <= num2 ? num1 : num2; i > 0; i--) {
+		if (num1 % i === 0 && num2 % i === 0) {
+			return i;
+		}
+	}
+}
