@@ -1048,3 +1048,14 @@ function division(num1, num2) {
 		}
 	}
 }
+
+//-------------------------------
+
+function heyGuy(dude){
+	if (dude === "hey guy"){
+		var newDude = dude.split('').forEach(function(e){
+			e = 'i';
+		})
+	}
+	return newDude;
+}
