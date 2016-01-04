@@ -1059,3 +1059,10 @@ function heyGuy(dude){
 	}
 	return newDude;
 }
+
+//playing with map
+
+var a = [1, 2, 3, 4, 5, 6];
+a.map(function (e) {
+	e += 10;
+});
