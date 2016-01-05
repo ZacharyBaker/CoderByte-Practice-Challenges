@@ -1066,3 +1066,20 @@ var a = [1, 2, 3, 4, 5, 6];
 a.map(function (e) {
 	e += 10;
 });
+
+//--------------------------------
+function divisionStringified(num1, num2) {
+	var result = num1 / num2;
+
+	result = Math.floor(result);
+	var str = result + '';
+
+	var resultArray = str.split('');
+	if (resultArray.length > 3) {
+		resultArray.splice(1, 0, ",");
+	}
+	resultArray = resultArray.join('');
+	result = resultArray;
+	return result;
+
+}
