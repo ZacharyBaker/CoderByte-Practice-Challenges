@@ -1083,3 +1083,11 @@ function divisionStringified(num1, num2) {
 	return result;
 
 }
+
+//-------------------------
+
+//translate to the tribe numbers
+
+function countArara(n) {
+    
+}
