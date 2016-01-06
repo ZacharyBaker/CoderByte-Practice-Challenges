@@ -941,23 +941,23 @@ function lengthOfLine(array) {
 
 //-------------------------------
 
-function mine(dude){
-	
-	if (dude.indexOf("m")){
+function mine(dude) {
+
+	if (dude.indexOf("m")) {
 		return dude.replace(/m/g, "");
 	} else return false;
-	
+
 }
 
 
 //----------------------------------------------------
 
-function yours(dude){
-	
-	if (dude.indexOf("y")){
+function yours(dude) {
+
+	if (dude.indexOf("y")) {
 		return dude.replace(/y/g, "");
 	} else return false;
-	
+
 }
 
 //----------------------------
@@ -978,42 +978,42 @@ replace(myArray);
 
 //is it a perfect square??
 
-var isSquare = function(n){
-  if (n < 0) return false;
-  var dude = Math.sqrt(n);
-  if ( Number.isInteger(dude) ) return true;
-  else return false;
+var isSquare = function (n) {
+	if (n < 0) return false;
+	var dude = Math.sqrt(n);
+	if (Number.isInteger(dude)) return true;
+	else return false;
 }
 
 //----------------------
 
-var isSquare = function(n){
+var isSquare = function (n) {
 	return Math.sqrt(n) % 1 === 0;
 }
 //=------------------
 
 function sum(array) {
-  return array.reduce( (prev, curr) => prev + curr );
+	return array.reduce((prev, curr) => prev + curr);
 }
 
 //------------------------------------
 
 //valid pin
 
-function validatePIN (pin) {
-if(!(pin.length === 4 || pin.length === 6)) return false; 
-var x = pin.replace(/[^0-9]/g, "");
-return x.length === pin.length;
+function validatePIN(pin) {
+	if (!(pin.length === 4 || pin.length === 6)) return false;
+	var x = pin.replace(/[^0-9]/g, "");
+	return x.length === pin.length;
 }
 
 //---------------------
 
 //pairs
 
-var pairs = {'A':'T','T':'A','C':'G','G':'C'};
+var pairs = { 'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C' };
 
-function DNAStrand(dna){
-  return dna.split('').map(function(v){ return pairs[v] }).join('');
+function DNAStrand(dna) {
+	return dna.split('').map(function (v) { return pairs[v] }).join('');
 }
 
 
@@ -1051,9 +1051,9 @@ function division(num1, num2) {
 
 //-------------------------------
 
-function heyGuy(dude){
-	if (dude === "hey guy"){
-		var newDude = dude.split('').forEach(function(e){
+function heyGuy(dude) {
+	if (dude === "hey guy") {
+		var newDude = dude.split('').forEach(function (e) {
 			e = 'i';
 		})
 	}
@@ -1089,5 +1089,13 @@ function divisionStringified(num1, num2) {
 //translate to the tribe numbers
 
 function countArara(n) {
-    
+    var adak = n / 2;
+    var arara;
+    for (var i = 0; i < adak; i++) {
+		arara.concat("adak ");
+    }
+    if (n % 2 === 1) {
+		arara.concat("anane");
+		return arara;
+	}
 }
