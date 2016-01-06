@@ -1089,13 +1089,19 @@ function divisionStringified(num1, num2) {
 //translate to the tribe numbers
 
 function countArara(n) {
-    var adak = n / 2;
-    var arara;
+    var adak = Math.floor(n / 2);
+    var arara = "";
     for (var i = 0; i < adak; i++) {
-		arara.concat("adak ");
+		if (arara === "") arara = arara + "adak";
+	 	else arara = arara + " adak";
     }
-    if (n % 2 === 1) {
-		arara.concat("anane");
+    if (n % 2 === 1 && arara === "") {
+		arara = arara + "anane";
+		return arara;
+	} else if (n % 2 === 1 && arara !== "") {
+		arara = arara + " anane";
 		return arara;
 	}
+	
+	else return arara;
 }
