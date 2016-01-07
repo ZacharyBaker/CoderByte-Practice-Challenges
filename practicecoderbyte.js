@@ -1097,3 +1097,21 @@ function countArara(n) {
 	
 	else return arara;
 }
+//---------------------------
+
+/* Should return ᐃ type:
+  0 : if ᐃ cannot be made with given sides
+  1 : acute ᐃ
+  2 : right ᐃ
+  3 : obtuse ᐃ
+*/
+function triangleType(a, b, c){
+  var s1 = Math.acos(((b*b) + (c*c) - (a*a)) / (2*b*c));
+  var s2 = Math.acos(((c*c) + (a*a) - (b*b)) / (2*a*c));
+  var s3 = 180 - s2 - s1;
+  console.log(s1);
+  console.log(s2);
+  console.log(s3);
+
+  return 0;
+}
