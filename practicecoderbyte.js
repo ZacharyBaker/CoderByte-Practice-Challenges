@@ -897,8 +897,6 @@ function powers(list) {
 	// Program me!
 }
 
-
-
 //----------------------------------------
 
 
@@ -922,8 +920,6 @@ function chain(x, functions) {
 	});
 	return x;
 }
-
-
 //------------------
 //distance between two points
 
@@ -938,7 +934,6 @@ function lengthOfLine(array) {
 	
 	return c; //length of the line rounded to 2 decimal places as a string
 }
-
 //-------------------------------
 
 function mine(dude) {
@@ -1015,8 +1010,6 @@ var pairs = { 'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C' };
 function DNAStrand(dna) {
 	return dna.split('').map(function (v) { return pairs[v] }).join('');
 }
-
-
 //-------------------------
 
 //swapping case
@@ -1083,7 +1076,6 @@ function divisionStringified(num1, num2) {
 	return result;
 
 }
-
 //-------------------------
 
 //translate to the tribe numbers
