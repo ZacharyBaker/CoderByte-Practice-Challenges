@@ -1125,3 +1125,9 @@ function triangleType(a, b, c){
   if (2*max*max >  a*a+b*b+c*c) return 3;
   return 1;
 }
+
+//--------------------
+
+function findOutlier(integers){
+  //your code here
+}
