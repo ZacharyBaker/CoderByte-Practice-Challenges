@@ -1129,5 +1129,24 @@ function triangleType(a, b, c){
 //--------------------
 
 function findOutlier(integers){
-  //your code here
+  var even = 0;
+  var odd = 0;
+  var outlier;
+  for (var i = 0; i < integers.length; i++) {
+    var test = integers[i] % 2;
+    if (test === 0) even += 1;
+    else odd +=1;
+  }
+  if (even > odd) {
+  	integers.forEach(function(e){
+		  if (e % 2 !== 0) outlier = e;
+	  })
+  } else {
+	  	integers.forEach(function(e){
+		  if (e % 2 === 0) outlier = e;
+	  })
+  }
+  return outlier;
 }
+
+findOutlier([0,1,2]);
