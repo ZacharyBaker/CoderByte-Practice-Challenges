@@ -1173,6 +1173,8 @@ function list(names){
   names.forEach(function(e){
     nameArray.push(e.name);
   })
-  nameArray.join(', ');
-  
+  var nameStr = nameArray.join(', ');
+  var n = nameStr.lastIndexOf(",");
+  nameStr = nameStr.slice(0, n) + nameStr.slice(n).replace(',', ' &');
+  return nameStr;
 }
