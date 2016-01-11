@@ -1169,5 +1169,10 @@ function isPrime(value) {
 // separated by commas except for the last two names,
 //  which should be separated by an ampersand.
 function list(names){
-  //your code here
+  var nameArray = [];
+  names.forEach(function(e){
+    nameArray.push(e.name);
+  })
+  nameArray.join(', ');
+  
 }
