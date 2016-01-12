@@ -1178,3 +1178,11 @@ function list(names){
   nameStr = nameStr.slice(0, n) + nameStr.slice(n).replace(',', ' &');
   return nameStr;
 }
+
+//--------------------
+//another example
+function list(names){
+  var last = names.pop() || { name: '' }
+  result = names.map(function(n) { return n.name }).join(', ')
+  return result ? result + ' & ' + last.name : last.name
+}
