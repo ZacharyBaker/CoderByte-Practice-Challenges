@@ -1186,3 +1186,24 @@ function list(names){
   result = names.map(function(n) { return n.name }).join(', ')
   return result ? result + ' & ' + last.name : last.name
 }
+
+//------------------
+
+function isArrayAceeptable(arr) {
+	var cantBeEqualArr = [];
+	if (Array.isArray(arr) && arr.length > 0) {
+		for (var i = 0; i < arr.length; i++) {
+			if (arr[i] > 0 && arr[i] % 1 === 0) {
+				var acceptable = true;
+				cantBeEqualArr.push(arr[i]);
+
+			} else {
+				return false
+			}
+		}
+	} else {
+		return false;
+	}
+
+	return acceptable;
+}
