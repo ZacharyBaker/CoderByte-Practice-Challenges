@@ -1207,3 +1207,17 @@ function isArrayAceeptable(arr) {
 
 	return acceptable;
 }
+
+//--------------------------------------------
+function narcissistic( value ) {
+  var arrVal = String(value).split('');
+  var expon = arrVal.length;
+  var multipliedArr = arrVal.map(function(e){
+    return Math.pow(e, expon);
+  });
+  var narc = multipliedArr.reduce(function(prev, curr){
+    return prev += curr;
+  });
+  return narc === value;
+  
+}
