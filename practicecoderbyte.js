@@ -1228,3 +1228,23 @@ function narcissistic( value ) {
     return p + Math.pow(c, ('' + value).length)
     }, 0) == value;
 }
+//----------------
+
+//sum of multiples of five and three
+
+function solution(number){
+  var threeCounter = 3;
+  var fiveCounter = 5;
+  var arr = [];
+  while (threeCounter < number){
+    arr.push(threeCounter);
+    threeCounter += 3;
+  }
+  while (fiveCounter < number) {
+    arr.push(fiveCounter);
+    fiveCounter += 5;
+  }
+  return arr.reduce(function(prev, curr){
+    return prev + curr;
+  })
+}
