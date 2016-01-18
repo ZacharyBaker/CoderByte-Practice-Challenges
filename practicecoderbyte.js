@@ -1264,3 +1264,5 @@ function onLine(points) {
   var mike = (points[1][1] - points[2][1]) / (points[1][0] - points[2][0]);
   return magic === mike;
 }
+/////not finished
+//------------------------------------
