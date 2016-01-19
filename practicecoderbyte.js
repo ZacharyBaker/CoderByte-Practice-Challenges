@@ -1266,3 +1266,16 @@ function onLine(points) {
 }
 /////not finished
 //------------------------------------
+
+//------------------------
+//count the characters
+
+function count (string) {  
+  string = string.split("");
+  var chars = {};
+  for(var i = 0; i < string.length; i++) {
+    if(chars[string[i]] == undefined) chars[string[i]] = 0;
+    chars[string[i]]++;
+  }
+  return chars;
+}
