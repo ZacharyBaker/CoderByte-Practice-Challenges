@@ -1279,3 +1279,21 @@ function count (string) {
   }
   return chars;
 }
+
+//--------------------
+
+//move zeros to the end
+
+var moveZeros = function (arr) {
+  var arrOfZeros = [];
+  for (var i = arr.length - 1; i >= 0; i--){
+    if (arr[i] === 0){
+    arrOfZeros.push(arr[i]);
+    arr.splice(i, 1);
+    }
+  }
+  arrOfZeros.forEach(function(e){
+    arr.push(e);
+  })
+  return arr;
+}
