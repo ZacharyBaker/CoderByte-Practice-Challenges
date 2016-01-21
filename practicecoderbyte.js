@@ -1297,3 +1297,24 @@ var moveZeros = function (arr) {
   })
   return arr;
 }
+
+//-----------------------
+//translate to the tribe numbers
+
+function countArara(n) {
+    var adak = Math.floor(n / 2);
+    var arara = "";
+    for (var i = 0; i < adak; i++) {
+		if (arara === "") arara = arara + "adak";
+	 	else arara = arara + " adak";
+    }
+    if (n % 2 === 1 && arara === "") {
+		arara = arara + "anane";
+		return arara;
+	} else if (n % 2 === 1 && arara !== "") {
+		arara = arara + " anane";
+		return arara;
+	}
+	
+	else return arara;
+}
