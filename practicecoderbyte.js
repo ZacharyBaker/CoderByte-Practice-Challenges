@@ -1338,13 +1338,14 @@ replace(myArray);
 //----dart board game
 function scoreThrows(radiuses){
   var score = 0;
+  if(radiuses.length === 0) return 0;
   radiuses.forEach(function(e){
     if (e <= 10 && e >=5) score += 5;
     if (e < 5) score += 10;
   })
   var dude = radiuses.every(function(e){
-    e < 5;
+   return e < 5;
   })
-  if (dude) score += 100;
+  if (dude === true) score += 100;
   return score;
 }
