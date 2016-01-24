@@ -1349,3 +1349,23 @@ function scoreThrows(radiuses){
   if (dude === true) score += 100;
   return score;
 }
+
+//------------------------------------
+function simpleSymbols(str) {
+	if (/[a-z]/.test(str[0])) {
+		return false;
+	}
+
+	var value;
+
+	for (var i = 1; i < str.length; i++) {
+		if (str[i] === /[a-z]/) {
+			if (/str/.test("+[str[i]]+")) {
+				value = true;
+			} else {
+				value = false;
+			}
+		}
+	}
+	return value;
+}
