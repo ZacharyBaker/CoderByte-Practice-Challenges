@@ -1397,6 +1397,24 @@ Dictionary.prototype.getMatchingWords = function(pattern) {
   })
     
 }
+//^incomplete
+function Dictionary(words) {
+  this.words = words;
+}
+
+Dictionary.prototype.getMatchingWords = function(pattern) {
+  var result = [];
+  this.words.forEach(function(word){
+    if (word.length == pattern.length)
+    {
+      for (var a = 0; a < word.length; a++)
+        if (!(word[a]==pattern[a] || pattern[a]== "?")) return false;
+      result.push(word);
+    }
+  });
+  return result;
+}
+
 
 //------------------------
 
