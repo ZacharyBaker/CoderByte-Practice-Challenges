@@ -1376,31 +1376,7 @@ function simpleSymbols(str) {
 // may contain letters (lowercase) and placeholders ("?"). A placeholder 
 //stands for exactly one arbitrary letter.
 
-function Dictionary(words) {
-  this.words = words;
-}
 
-Dictionary.prototype.getMatchingWords = function(pattern) {
-  var words = Dictionary.words;
-  words.forEach(function(e){
-    var addWord = false;
-    for (var i = 0; i < pattern.length; i++){
-      if (pattern[i] === "?" && e[i]){
-        addWord = true;
-      
-      }
-      else if (pattern[i] !== "?"){
-        if (pattern[i] === e[i]) addWord = true;
-        else return false;
-      }
-    }
-  })
-    
-}
-//^incomplete
-function Dictionary(words) {
-  this.words = words;
-}
 
 Dictionary.prototype.getMatchingWords = function(pattern) {
   var result = [];
