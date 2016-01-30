@@ -1413,3 +1413,6 @@ function addThemUp(arr) {
 }
 
 //////////////////////////////
+//cut the wire!
+var wire = Object.keys(this).pop()
+CutTheWire(this[wire]);
