@@ -1416,3 +1416,10 @@ function addThemUp(arr) {
 //cut the wire!
 var wire = Object.keys(this).pop()
 CutTheWire(this[wire]);
+
+//------------------------
+function validatePin(pin) {
+	if (!(pin.length === 4 || pin.length === 6)) return false;
+	var x = pin.replace(/[^0-9]/g, "");
+	return x.length === pin.length;
+}
