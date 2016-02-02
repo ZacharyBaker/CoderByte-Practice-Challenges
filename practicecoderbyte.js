@@ -1430,3 +1430,16 @@ function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
+
+//------------------------
+var replaced = function (arr) {
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] % 2 !== 0) {
+			arr[i] = 'O';
+		}
+	}
+	return arr;
+}
+
+var myArray = [1, 2, 3, 4, 5, 6];
+replaced(myArray);
