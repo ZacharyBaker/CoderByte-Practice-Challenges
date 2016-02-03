@@ -1443,3 +1443,11 @@ var replaced = function (arr) {
 
 var myArray = [1, 2, 3, 4, 5, 6];
 replaced(myArray);
+
+//-----------------------
+
+function cakes(recipe, available) {
+  return Object.keys(recipe).reduce(function(val, ingredient) {
+    return Math.min(Math.floor(available[ingredient] / recipe[ingredient] || 0), val)
+  }, Infinity)  
+}
