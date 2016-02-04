@@ -1451,3 +1451,15 @@ function cakes(recipe, available) {
     return Math.min(Math.floor(available[ingredient] / recipe[ingredient] || 0), val)
   }, Infinity)  
 }
+
+//------------------------------
+
+// return last digit of powered nums
+
+var lastDigit = function(str1, str2){  
+  var num = String(Math.pow(str1, str2));
+  if (num.length < 2) return Number(num);
+  else {
+    return Number(num[num.length-1]);
+  }
+}
