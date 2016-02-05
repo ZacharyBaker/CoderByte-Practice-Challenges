@@ -1463,3 +1463,4 @@ var lastDigit = function(str1, str2){
     return Number(num[num.length-1]);
   }
 }
+//edge cases for "infinity" numbers is not working.
