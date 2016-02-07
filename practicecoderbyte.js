@@ -1488,3 +1488,13 @@ var lastDigit3 = function(str1, str2){
   var n=(str2.length>1)?((str2[str2.length-2]+str2[str2.length-1])*1)%4:str2*1%4;
   return obj[num][n];
 }
+//----------------------------
+
+//Test.expect(rot13("EBG13 rknzcyr.") == "ROT13 example.");
+//Test.expect(rot13("This is my first ROT13 excercise!") == "Guvf vf zl svefg EBG13 rkprepvfr!")
+
+//rot13 decipher the joke
+
+function rot13(str) {
+
+}
