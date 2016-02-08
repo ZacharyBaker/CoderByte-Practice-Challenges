@@ -1498,3 +1498,7 @@ var lastDigit3 = function(str1, str2){
 function rot13(str) {
 
 }
+
+//Input	ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+//Output	NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm
+//use to decipher
