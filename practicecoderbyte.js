@@ -1566,3 +1566,10 @@ function rot13(str) {
 //Input	ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
 //Output	NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm
 //use to decipher
+
+//more efficient way
+function rot14(str) {
+  return str.replace(/[a-z]/ig, function(x){
+    return String.fromCharCode(x.charCodeAt(0) + (x.toLowerCase() <= 'm' ? 13: -13));
+  });
+}
